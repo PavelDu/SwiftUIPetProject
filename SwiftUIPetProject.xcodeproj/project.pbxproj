@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EAE5EACE2A8A2324000EA3C4 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EACD2A8A2324000EA3C4 /* NavigationBar.swift */; };
 		EAE890FF2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE890FE2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift */; };
 		EAE891012A8978B000C0D9C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE891002A8978B000C0D9C7 /* ContentView.swift */; };
 		EAE891032A8978B200C0D9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE891022A8978B200C0D9C7 /* Assets.xcassets */; };
 		EAE891062A8978B200C0D9C7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE891052A8978B200C0D9C7 /* Preview Assets.xcassets */; };
+		EAE8910D2A8A212200C0D9C7 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = EAE8910C2A8A212200C0D9C7 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EAE5EACD2A8A2324000EA3C4 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
 		EAE890FB2A8978B000C0D9C7 /* SwiftUIPetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE890FE2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPetProjectApp.swift; sourceTree = "<group>"; };
 		EAE891002A8978B000C0D9C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EAE891022A8978B200C0D9C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EAE891052A8978B200C0D9C7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EAE8910C2A8A212200C0D9C7 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,9 +36,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EAE5EACA2A8A228E000EA3C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAE5EACB2A8A2294000EA3C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EAE5EACC2A8A2298000EA3C4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EAE890F22A8978AF00C0D9C7 = {
 			isa = PBXGroup;
 			children = (
+				EAE8910C2A8A212200C0D9C7 /* .gitignore */,
 				EAE890FD2A8978B000C0D9C7 /* SwiftUIPetProject */,
 				EAE890FC2A8978B000C0D9C7 /* Products */,
 			);
@@ -51,10 +77,12 @@
 		EAE890FD2A8978B000C0D9C7 /* SwiftUIPetProject */ = {
 			isa = PBXGroup;
 			children = (
-				EAE890FE2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift */,
+				EAE5EACC2A8A2298000EA3C4 /* Model */,
+				EAE5EACB2A8A2294000EA3C4 /* ViewModel */,
+				EAE5EACA2A8A228E000EA3C4 /* View */,
 				EAE891002A8978B000C0D9C7 /* ContentView.swift */,
-				EAE891022A8978B200C0D9C7 /* Assets.xcassets */,
-				EAE891042A8978B200C0D9C7 /* Preview Content */,
+				EAE5EACD2A8A2324000EA3C4 /* NavigationBar.swift */,
+				EAE8910E2A8A213E00C0D9C7 /* Presentation */,
 			);
 			path = SwiftUIPetProject;
 			sourceTree = "<group>";
@@ -64,7 +92,18 @@
 			children = (
 				EAE891052A8978B200C0D9C7 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = "Preview Content";
+			path = "../Preview Content";
+			sourceTree = "<group>";
+		};
+		EAE8910E2A8A213E00C0D9C7 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				EAE891022A8978B200C0D9C7 /* Assets.xcassets */,
+				EAE890FE2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift */,
+				EAE891042A8978B200C0D9C7 /* Preview Content */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAE891062A8978B200C0D9C7 /* Preview Assets.xcassets in Resources */,
+				EAE8910D2A8A212200C0D9C7 /* .gitignore in Resources */,
 				EAE891032A8978B200C0D9C7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +179,7 @@
 			files = (
 				EAE891012A8978B000C0D9C7 /* ContentView.swift in Sources */,
 				EAE890FF2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift in Sources */,
+				EAE5EACE2A8A2324000EA3C4 /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,7 +307,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPetProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPetProject/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = LX3UN3Y834;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -295,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPetProject/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftUIPetProject/Presentation/Preview Content\"";
 				DEVELOPMENT_TEAM = LX3UN3Y834;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
