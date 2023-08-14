@@ -35,7 +35,7 @@ struct NavigationBar: View {
             }.frame(width: UIScreen.main.bounds.size.width - 70, alignment: .leading)
                 .overlay(
                     RoundedRectangle(cornerRadius: 20)
-                        .stroke(Color.gray, lineWidth: 1)
+                        .stroke(Color.gray, lineWidth: 0.2)
                 )
                 .padding(0)
         }

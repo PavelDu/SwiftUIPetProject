@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-//    init() {
-//        UITabBar.appearance().backgroundColor = .gray
-//    }
+    //    init() {
+    //        UITabBar.appearance().backgroundColor = .gray
+    //    }
     @State private var selectedView = 1
     
     var body: some View {
@@ -19,18 +19,36 @@ struct ContentView: View {
         TabView(selection: $selectedView) {
             //  Вкладка 1
             NavigationView {
-                VStack {
-                    
-                } .toolbar {
+                ScrollView {
+                    VStack {
+                        StoryCollectionView()
+                        Spacer()
+                    }
+                }
+             .toolbar {
                     NavigationBar()
                 }
-             
             }
             
             .tabItem {
                 Image(systemName: "1.circle")
                 Text("Вкладка 1")
             } .tag(1)
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             // Вкладка 2
