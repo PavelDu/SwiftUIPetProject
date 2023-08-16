@@ -14,6 +14,8 @@
 		EAE5EAD82A8A6818000EA3C4 /* MokData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EAD72A8A6818000EA3C4 /* MokData.swift */; };
 		EAE5EADA2A8A86F9000EA3C4 /* PromoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EAD92A8A86F9000EA3C4 /* PromoViewModel.swift */; };
 		EAE5EADE2A8B8A1E000EA3C4 /* PromoCollectionViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EADD2A8B8A1E000EA3C4 /* PromoCollectionViewContent.swift */; };
+		EAE5EAE02A8CCB4F000EA3C4 /* BonusBarcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EADF2A8CCB4F000EA3C4 /* BonusBarcodeView.swift */; };
+		EAE5EAE22A8CD44B000EA3C4 /* BarcodeBonusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE5EAE12A8CD44B000EA3C4 /* BarcodeBonusViewModel.swift */; };
 		EAE890FF2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE890FE2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift */; };
 		EAE891012A8978B000C0D9C7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAE891002A8978B000C0D9C7 /* ContentView.swift */; };
 		EAE891032A8978B200C0D9C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAE891022A8978B200C0D9C7 /* Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		EAE5EAD72A8A6818000EA3C4 /* MokData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MokData.swift; sourceTree = "<group>"; };
 		EAE5EAD92A8A86F9000EA3C4 /* PromoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewModel.swift; sourceTree = "<group>"; };
 		EAE5EADD2A8B8A1E000EA3C4 /* PromoCollectionViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoCollectionViewContent.swift; sourceTree = "<group>"; };
+		EAE5EADF2A8CCB4F000EA3C4 /* BonusBarcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusBarcodeView.swift; sourceTree = "<group>"; };
+		EAE5EAE12A8CD44B000EA3C4 /* BarcodeBonusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeBonusViewModel.swift; sourceTree = "<group>"; };
 		EAE890FB2A8978B000C0D9C7 /* SwiftUIPetProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPetProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE890FE2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIPetProjectApp.swift; sourceTree = "<group>"; };
 		EAE891002A8978B000C0D9C7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,11 @@
 		EAE5EACA2A8A228E000EA3C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EAE891002A8978B000C0D9C7 /* ContentView.swift */,
+				EAE5EACD2A8A2324000EA3C4 /* NavigationBarView.swift */,
+				EAE5EAD12A8A35B1000EA3C4 /* StoryCollectionView.swift */,
+				EAE5EADD2A8B8A1E000EA3C4 /* PromoCollectionViewContent.swift */,
+				EAE5EADF2A8CCB4F000EA3C4 /* BonusBarcodeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -60,6 +69,7 @@
 			children = (
 				EAE5EAD52A8A5965000EA3C4 /* StoriesViewModel.swift */,
 				EAE5EAD92A8A86F9000EA3C4 /* PromoViewModel.swift */,
+				EAE5EAE12A8CD44B000EA3C4 /* BarcodeBonusViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -96,10 +106,6 @@
 				EAE5EACC2A8A2298000EA3C4 /* Model */,
 				EAE5EACB2A8A2294000EA3C4 /* ViewModel */,
 				EAE5EACA2A8A228E000EA3C4 /* View */,
-				EAE891002A8978B000C0D9C7 /* ContentView.swift */,
-				EAE5EACD2A8A2324000EA3C4 /* NavigationBarView.swift */,
-				EAE5EAD12A8A35B1000EA3C4 /* StoryCollectionView.swift */,
-				EAE5EADD2A8B8A1E000EA3C4 /* PromoCollectionViewContent.swift */,
 				EAE8910E2A8A213E00C0D9C7 /* Presentation */,
 			);
 			path = SwiftUIPetProject;
@@ -204,6 +210,8 @@
 				EAE5EAD82A8A6818000EA3C4 /* MokData.swift in Sources */,
 				EAE5EACE2A8A2324000EA3C4 /* NavigationBarView.swift in Sources */,
 				EAE5EAD42A8A5900000EA3C4 /* ModelContentView.swift in Sources */,
+				EAE5EAE02A8CCB4F000EA3C4 /* BonusBarcodeView.swift in Sources */,
+				EAE5EAE22A8CD44B000EA3C4 /* BarcodeBonusViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

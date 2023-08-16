@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct NavigationBarContentView: View {
-    
     private enum UIConstants {
-        static let imageSize: CGFloat = 15
-        static let imageLeadingPadding: CGFloat = 8
+        static let imageSizeOfLocation: CGFloat = 15
+        static let leadingPaddingOfimageLocation: CGFloat = 8
         static let textPadding: CGFloat = 8
         static let buttonWidth: CGFloat = UIScreen.main.bounds.size.width - 70
         static let cornerRadius: CGFloat = 20
@@ -27,17 +26,16 @@ struct NavigationBarContentView: View {
         }
     }
     
-    var buttonSearchOfCity: some View {
+   private var buttonSearchOfCity: some View {
         
         Button(action: {
             print("Тап по кнопке - список городов")
         }){
             HStack(spacing: 0) {
                 Image(systemName: "mappin.and.ellipse")
-                    .font(.system(size: UIConstants.imageSize))
+                    .font(.system(size: UIConstants.imageSizeOfLocation))
                     .foregroundColor(.red)
-                    .padding(.leading, UIConstants.imageLeadingPadding)
-                    
+                    .padding(.leading, UIConstants.leadingPaddingOfimageLocation)
                 Text("Москва, Москва и Московская область")
                     .padding(UIConstants.textPadding)
                     .multilineTextAlignment(.leading)
@@ -53,7 +51,7 @@ struct NavigationBarContentView: View {
         }
     }
     
-    var menuButton: some View {
+    private var menuButton: some View {
         Button(action: {
             print("Тап по кнопке - меню справа")
         }){

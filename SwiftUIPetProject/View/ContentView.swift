@@ -24,6 +24,8 @@ struct ContentView: View {
                         StoryCollectionContentView()
                         Spacer()
                         PromoCollectionViewContent()
+                            .padding(.bottom, 15)
+                        BonusBarcodeView()
                     }
                 }
              .toolbar {

@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct StoryCollectionContentView: View {
-    
     private enum Constants {
         static let horizontalSpacing: CGFloat = 25
         static let padding: CGFloat = 20
