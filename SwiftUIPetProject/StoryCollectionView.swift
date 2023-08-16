@@ -7,49 +7,59 @@
 
 import SwiftUI
 
-struct StoryCollectionView: View {
+struct StoryCollectionContentView: View {
+    
+    private enum Constants {
+        static let horizontalSpacing: CGFloat = 25
+        static let padding: CGFloat = 20
+    }
     
     @ObservedObject var viewModel = StoriesViewModel()
     
-    var body: some View {
-        stories
-    }
-    
-    var stories: some View {
+    var body: some View  {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 25) {
+            HStack(spacing: Constants.horizontalSpacing) {
                 ForEach(viewModel.stories) { storyItem in
-                    StoryView(viewModel: viewModel, story: storyItem)
+                    StoryViewCell(viewModel: viewModel, story: storyItem)
                 }
             }
-            .padding(20)
+            .padding(Constants.padding)
         }
     }
 }
-struct StoryView: View {
+
+struct StoryViewCell: View {
     @ObservedObject var viewModel: StoriesViewModel
     let story: StoryModel
     
+    private enum UIConstants {
+        static let horizontalPadding: CGFloat = 10
+        static let verticalPadding: CGFloat = 6
+        static let circleSize: CGFloat = 70
+        static let imageFrameSize: CGFloat = 60
+        static let textFrameSize: CGSize = CGSize(width: 80, height: 30)
+        static let borderWidth: CGFloat = 3
+        static let fontSize: CGFloat = 12
+    }
+    
     var body: some View {
-        VStack(spacing: 6) {
+        VStack(spacing: UIConstants.verticalPadding) {
             ZStack {
-                // Круглая маска для видимости изображения под кругом
                 Circle()
-                    .frame(width: 70, height: 70) // Увеличиваем размер маски
-                    .foregroundColor(.clear) // Прозрачный цвет круга
-                    .overlay(Circle().stroke(Color.green, lineWidth: 3)) // Обводка круга
-                // Изображение сториса
+                    .frame(width: UIConstants.circleSize, height: UIConstants.circleSize)
+                    .foregroundColor(.clear)
+                    .overlay(Circle().stroke(Color.green, lineWidth: UIConstants.borderWidth))
                 Image(story.imageStory)
                     .resizable()
-                    .frame(width: 60, height: 60)
-                    .clipShape(Circle()) // Обрезаем изображение в форму круга
-                    .padding(.horizontal, 10)
+                    .frame(width: UIConstants.imageFrameSize, height: UIConstants.imageFrameSize)
+                    .clipShape(Circle())
+                    .padding(.horizontal, UIConstants.horizontalPadding)
             }
-                       Text(story.textStory)
-                .frame(width: 80, height: 30)
-                .font(.system(size: 12))
-                           .lineLimit(2) // Перенос на две строки
-                           .multilineTextAlignment(.center) // Выравнив
+            Text(story.textStory)
+                .frame(width: UIConstants.textFrameSize.width, height: UIConstants.textFrameSize.height)
+                .font(.system(size: UIConstants.fontSize))
+                .lineLimit(2)
+                .multilineTextAlignment(.center)
         }
         .onTapGesture {
             viewModel.markStoryAsViewed(story: story)
@@ -57,8 +67,8 @@ struct StoryView: View {
     }
 }
 
-struct StoryCollectionView_Previews: PreviewProvider {
+struct StoryCollectionContentView_Previews: PreviewProvider {
     static var previews: some View {
-        StoryCollectionView()
+        StoryCollectionContentView()
     }
 }

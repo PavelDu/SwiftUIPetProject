@@ -18,3 +18,13 @@ let dataStories: [(String, String)] = [
     ("Рецепт недели", "storyImage7")
 ]
 
+//MARK: - Image of promoCollectionView
+let imagePromoCollection: [String] = [
+    "promo1",
+    "promo2",
+    "promo3",
+    "promo4",
+    "promo5",
+    "promo6",
+    "promo7",
+]

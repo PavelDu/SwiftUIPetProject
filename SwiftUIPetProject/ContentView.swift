@@ -21,12 +21,13 @@ struct ContentView: View {
             NavigationView {
                 ScrollView {
                     VStack {
-                        StoryCollectionView()
+                        StoryCollectionContentView()
                         Spacer()
+                        PromoCollectionViewContent()
                     }
                 }
              .toolbar {
-                    NavigationBar()
+                 NavigationBarContentView()
                 }
             }
             
