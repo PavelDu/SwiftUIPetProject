@@ -10,7 +10,9 @@ import SwiftUI
 class PromolViewModel: ObservableObject {
     @Published var promoImages: [PromoModel] = DataPromoCollection.imagePromoCollection
     
-    func tappedImageIndex(for promoImage: PromoModel) -> Int {
+    func handleTapOnImage(for promoImage: PromoModel) -> Int {
         return promoImages.firstIndex(where: { $0.id == promoImage.id }) ?? -1
     }
 }
+
+

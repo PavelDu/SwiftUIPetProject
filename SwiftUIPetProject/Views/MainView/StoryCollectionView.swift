@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct StoryCollectionContentView: View {
-    private enum Constants {
-        static let horizontalSpacing: CGFloat = 25
-        static let padding: CGFloat = 20
+    private enum UIConstants {
+        static let horizontalSpacing: CGFloat = 5
+        static let padding: CGFloat = 10
     }
     
     @ObservedObject var viewModel = StoriesViewModel()
     
     var body: some View  {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: Constants.horizontalSpacing) {
+            HStack(spacing: UIConstants.horizontalSpacing) {
                 ForEach(viewModel.stories) { storyItem in
                     StoryViewCell(viewModel: viewModel, story: storyItem)
                 }
             }
-            .padding(Constants.padding)
+            .padding(UIConstants.padding)
         }
     }
 }
@@ -34,11 +34,11 @@ struct StoryViewCell: View {
     private enum UIConstants {
         static let horizontalPadding: CGFloat = 10
         static let verticalPadding: CGFloat = 6
-        static let circleSize: CGFloat = 70
-        static let imageFrameSize: CGFloat = 60
+        static let circleSize: CGFloat = 55
+        static let imageFrameSize: CGFloat = 50
         static let textFrameSize: CGSize = CGSize(width: 80, height: 30)
-        static let borderWidth: CGFloat = 3
-        static let fontSize: CGFloat = 12
+        static let borderWidth: CGFloat = 2
+        static let fontSize: CGFloat = 11
     }
     
     var body: some View {
@@ -54,6 +54,7 @@ struct StoryViewCell: View {
                     .clipShape(Circle())
                     .padding(.horizontal, UIConstants.horizontalPadding)
             }
+            .frame(alignment: .top)
             Text(story.textStory)
                 .frame(width: UIConstants.textFrameSize.width, height: UIConstants.textFrameSize.height)
                 .font(.system(size: UIConstants.fontSize))

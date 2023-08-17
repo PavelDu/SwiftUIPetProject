@@ -38,3 +38,25 @@ struct StoreBenefitsModel : Identifiable {
     let imageStoreBenefits : String
 }
 
+//MARK: - Model for ProductModel
+struct ProductModel: Identifiable, Hashable {
+    let id = UUID()
+    let imageNameProduct: String
+    let price: Double
+    let priceUnit: String
+    let discount: Double?
+    let labelOnImageProduct: String?
+    var discountedPrice: Double? {
+        if let discount = discount {
+            return price * (1 - discount)
+        }
+        return nil
+    }
+    var discountPercentage: Int? {
+        if let discount = discount {
+            return Int(discount * 100)
+        }
+        return nil
+    }
+}
+
