@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		EA5EF1A42A8ED11A002E4BD2 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EF1A32A8ED11A002E4BD2 /* Tabs.swift */; };
+		EA5EF1C12A926D12002E4BD2 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EF1C02A926D12002E4BD2 /* MainTabView.swift */; };
+		EA5EF1C32A926E5C002E4BD2 /* CatalogTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EF1C22A926E5C002E4BD2 /* CatalogTabView.swift */; };
+		EA5EF1C52A926E66002E4BD2 /* CartTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EF1C42A926E66002E4BD2 /* CartTabView.swift */; };
+		EA5EF1C72A926E8B002E4BD2 /* ProfileTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EF1C62A926E8B002E4BD2 /* ProfileTabView.swift */; };
+		EA5EF1CB2A92B4AE002E4BD2 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5EF1CA2A92B4AE002E4BD2 /* TabBarItemView.swift */; };
 		EA7567B22A8D4D0C006FCF83 /* StoreBenefitsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7567B12A8D4D0C006FCF83 /* StoreBenefitsViewModel.swift */; };
 		EA7567B42A8D4FC0006FCF83 /* StoreBenefitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7567B32A8D4FC0006FCF83 /* StoreBenefitsView.swift */; };
 		EA7567B82A8E1796006FCF83 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7567B72A8E1796006FCF83 /* ProductsViewModel.swift */; };
@@ -30,6 +35,11 @@
 
 /* Begin PBXFileReference section */
 		EA5EF1A32A8ED11A002E4BD2 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		EA5EF1C02A926D12002E4BD2 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		EA5EF1C22A926E5C002E4BD2 /* CatalogTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogTabView.swift; sourceTree = "<group>"; };
+		EA5EF1C42A926E66002E4BD2 /* CartTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTabView.swift; sourceTree = "<group>"; };
+		EA5EF1C62A926E8B002E4BD2 /* ProfileTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTabView.swift; sourceTree = "<group>"; };
+		EA5EF1CA2A92B4AE002E4BD2 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
 		EA7567B12A8D4D0C006FCF83 /* StoreBenefitsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBenefitsViewModel.swift; sourceTree = "<group>"; };
 		EA7567B32A8D4FC0006FCF83 /* StoreBenefitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreBenefitsView.swift; sourceTree = "<group>"; };
 		EA7567B72A8E1796006FCF83 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
@@ -83,6 +93,18 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		EA5EF1BF2A926CE1002E4BD2 /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				EA5EF1CA2A92B4AE002E4BD2 /* TabBarItemView.swift */,
+				EA5EF1C02A926D12002E4BD2 /* MainTabView.swift */,
+				EA5EF1C22A926E5C002E4BD2 /* CatalogTabView.swift */,
+				EA5EF1C42A926E66002E4BD2 /* CartTabView.swift */,
+				EA5EF1C62A926E8B002E4BD2 /* ProfileTabView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
 		EA7567BB2A8E7CD9006FCF83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				EAE891002A8978B000C0D9C7 /* ContentView.swift */,
+				EA5EF1BF2A926CE1002E4BD2 /* TabViews */,
 				EA5EF1A12A8ECF05002E4BD2 /* MainView */,
 			);
 			path = Views;
@@ -245,13 +268,18 @@
 				EA7567B82A8E1796006FCF83 /* ProductsViewModel.swift in Sources */,
 				EAE891012A8978B000C0D9C7 /* ContentView.swift in Sources */,
 				EA7567B42A8D4FC0006FCF83 /* StoreBenefitsView.swift in Sources */,
+				EA5EF1C72A926E8B002E4BD2 /* ProfileTabView.swift in Sources */,
 				EAE5EADE2A8B8A1E000EA3C4 /* PromoCollectionViewContent.swift in Sources */,
 				EAE890FF2A8978B000C0D9C7 /* SwiftUIPetProjectApp.swift in Sources */,
 				EAE5EAD82A8A6818000EA3C4 /* MokData.swift in Sources */,
+				EA5EF1C12A926D12002E4BD2 /* MainTabView.swift in Sources */,
+				EA5EF1CB2A92B4AE002E4BD2 /* TabBarItemView.swift in Sources */,
+				EA5EF1C52A926E66002E4BD2 /* CartTabView.swift in Sources */,
 				EAE5EACE2A8A2324000EA3C4 /* NavigationBarView.swift in Sources */,
 				EA7567B22A8D4D0C006FCF83 /* StoreBenefitsViewModel.swift in Sources */,
 				EAE5EAD42A8A5900000EA3C4 /* ModelContentView.swift in Sources */,
 				EAE5EAE02A8CCB4F000EA3C4 /* BonusBarcodeView.swift in Sources */,
+				EA5EF1C32A926E5C002E4BD2 /* CatalogTabView.swift in Sources */,
 				EAE5EAE22A8CD44B000EA3C4 /* BarcodeBonusViewModel.swift in Sources */,
 				EA7567BA2A8E196C006FCF83 /* ProductsView.swift in Sources */,
 				EA5EF1A42A8ED11A002E4BD2 /* Tabs.swift in Sources */,

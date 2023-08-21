@@ -8,63 +8,45 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedTab: Tab = .first
-    
-    var body: some View {
-        TabView(selection: $selectedTab) {
-            tabView(for: .first)
-                .tabItem {
-                    Image(systemName:Tab.first.iconName)
-                    Text(Tab.first.title)
-                }
-                .tag(Tab.first)
-            
-            tabView(for: .second)
-                .tabItem {
-                    Image(systemName: Tab.second.iconName)
-                    Text(Tab.second.title)
-                }
-                .tag(Tab.second)
-            
-            tabView(for: .third)
-                .tabItem {
-                    Image(systemName: Tab.third.iconName)
-                    Text(Tab.third.title)
-                }
-                .tag(Tab.third)
-            
-            tabView(for: .fourth)
-                .tabItem {
-                    Image(systemName: Tab.fourth.iconName)
-                    Text(Tab.fourth.title)
-                }
-                .tag(Tab.fourth)
-        }
-        .accentColor(.green)
+    private enum UIConstants {
+        static let tabBarDividerHeight: CGFloat = 2
+        static let tabBarTopPadding: CGFloat = 8
     }
     
-    @ViewBuilder
-    func tabView(for tab: Tab) -> some View {
-        NavigationView {
-            VStack {
-                switch tab {
-                case .first:
-                    ScrollView {
-                        LazyVStack(spacing: 18) {
-                            StoryCollectionContentView()
-                            PromoCollectionViewContent()
-                            BonusBarcodeView()
-                            StoreBenefitsView()
-                            ProductsView()
-                        }
+    @State private var selectedTab: Tab = .main
+    
+    init() {
+        UITabBar.appearance().isHidden = true
+    }
+    
+    var body: some View {
+        VStack(spacing: 0) {
+            TabView(selection: $selectedTab) {
+                MainTabView()
+                    .tag(Tab.main)
+                
+                CatalogTabView()
+                    .tag(Tab.catalog)
+                
+                CartTabView()
+                    .tag(Tab.cart)
+                
+                ProfileTabView()
+                    .tag(Tab.profile)
+            }
+            ZStack(alignment: .top) {
+                Rectangle()
+                    .frame(width: .infinity, height: UIConstants.tabBarDividerHeight)
+                    .foregroundColor(.white)
+                    .opacity(0.2)
+                    .shadow(color: .gray, radius: 1, x: 0, y: -2)
+                HStack {
+                    ForEach(Tab.allCases, id: \.self) { tab in
+                        TabBarItem(tab: tab, selected: $selectedTab)
                     }
-                    .toolbar {
-                        NavigationBarContentView()
-                    }
-                default:
-                    Text("Содержимое \(tab.title)")
-                        .navigationBarTitle(tab.title, displayMode: .inline)
                 }
+                .padding(.top, UIConstants.tabBarTopPadding)
+                .frame(maxWidth: .infinity)
             }
         }
     }

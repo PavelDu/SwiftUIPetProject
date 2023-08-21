@@ -10,7 +10,7 @@ import SwiftUI
 struct StoryCollectionContentView: View {
     private enum UIConstants {
         static let horizontalSpacing: CGFloat = 5
-        static let padding: CGFloat = 10
+        static let paddingTop: CGFloat = 15
     }
     
     @ObservedObject var viewModel = StoriesViewModel()
@@ -22,7 +22,7 @@ struct StoryCollectionContentView: View {
                     StoryViewCell(viewModel: viewModel, story: storyItem)
                 }
             }
-            .padding(UIConstants.padding)
+            .padding(.top, UIConstants.paddingTop)
         }
     }
 }
