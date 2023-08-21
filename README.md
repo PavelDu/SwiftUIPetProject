@@ -8,9 +8,10 @@
 
 ## Главный экран
 
-![Скриншот приложения](https://github.com/PavelDu/SwiftUIPetProject/raw/main/SwiftUISpar.png)
-
-![Второй скриншот приложения](https://github.com/PavelDu/SwiftUIPetProject/raw/main/SwiftUISpar2.png)
+<div style="display:flex; flex-direction:row;">
+  <img src="https://github.com/PavelDu/SwiftUIPetProject/raw/main/SwiftUISpar.png" alt="Скриншот приложения" width="300"/>
+  <img src="https://github.com/PavelDu/SwiftUIPetProject/raw/main/SwiftUISpar2.png" alt="Второй скриншот приложения" width="300"/>
+</div>
 
 Главный экран приложения Spar был разработан с учетом удобства пользователя. Он предоставляет быстрый доступ к основным функциям приложения и отображает необходимую информацию в понятной и организованной форме.
 
