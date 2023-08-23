@@ -36,7 +36,7 @@ struct ContentView: View {
             }
             ZStack(alignment: .top) {
                 Rectangle()
-                    .frame(width: .infinity, height: UIConstants.tabBarDividerHeight)
+                    .frame(width: UIScreen.main.bounds.size.width, height: UIConstants.tabBarDividerHeight)
                     .foregroundColor(.white)
                     .opacity(0.2)
                     .shadow(color: .gray, radius: 1, x: 0, y: -2)

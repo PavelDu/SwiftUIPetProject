@@ -11,7 +11,7 @@ fileprivate enum UIConstants {
     static let bgImageCornerRadius: CGFloat = 20
     static let bgImageShadowRadius: CGFloat = 3
     static let bgImageShadowopacity: CGFloat = 0.5
-    static let frameViewWidth: CGFloat = UIScreen.main.bounds.width - 32.0
+    static let frameViewWidth: CGFloat = UIScreen.main.bounds.width - 30
     static let frameViewHeight: CGFloat = frameViewWidth * 0.3
     static let imageSize: CGFloat = UIScreen.main.bounds.width * 0.2
     static let bonusCountFontSizeLarge: CGFloat = 30

@@ -41,7 +41,7 @@ struct PromoCollectionViewCell: View {
     
     private enum UIConstants {
         static let imageWidth: CGFloat = UIScreen.main.bounds.width * 4/5
-        static let imageHeight: CGFloat = UIScreen.main.bounds.width * 2/5
+        static let imageHeight: CGFloat = UIScreen.main.bounds.width * 2.1/5
         static let cornerRadius: CGFloat = 20
     }
     

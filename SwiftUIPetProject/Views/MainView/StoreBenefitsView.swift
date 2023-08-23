@@ -19,8 +19,8 @@ struct StoreBenefitsView: View {
         static let shadowX: CGFloat = 4
         static let shadowY: CGFloat = 4
         static let imagePadding: CGFloat = 5
-        static let horizontalSpacing: CGFloat = 10
-        static let horizontalPadding: CGFloat = 16
+        static let horizontalSpacing: CGFloat = 2
+        static let horizontalPadding: CGFloat = 10
     }
     
     var body: some View {
